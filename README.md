@@ -9,10 +9,6 @@ My Self Affirmation is a vs code extension that displays a self affirmation from
 
 ## Extension Settings
 
-- Frequency of self affirmations can be configured with `my-self-affirmations.value` and `my-self-affirmations.unit` settings. The unit is an enum type of `s`, `m`, `h` for seconds, minutes and hours. E.g. for displaying affirmations every hour:
-
-
-
 This extension contributes the following settings:
 
 * `my-self-affirmations.affirmations`: Overrides the default self affirmations. Expects a json array of strings.

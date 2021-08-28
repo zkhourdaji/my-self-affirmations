@@ -3,7 +3,7 @@
   "displayName": "My Self Affirmations",
   "description": "My Self Affirmation is a vs code extension that displays a self affirmation from a configurable list of self affirmations on a set time interval",
   "publisher": "ZaferSamirKhourdaji",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.59.0"
   },
