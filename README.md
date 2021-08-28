@@ -1,70 +1,26 @@
-# my-self-affirmations README
+# My Self Affirmations
 
-This is the README for your extension "my-self-affirmations". After writing up a brief description, we recommend including the following sections.
+My Self Affirmation is a vs code extension that displays a self affirmation from a configurable list of self affirmations on a set time interval
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Provides a set of 90 default self affirmations.
+- Displays a random self affirmaiton on a default interval of 30 minutes.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+- Frequency of self affirmations can be configured with `my-self-affirmations.value` and `my-self-affirmations.unit` settings. The unit is an enum type of `s`, `m`, `h` for seconds, minutes and hours. E.g. for displaying affirmations every hour:
 
-For example:
+
 
 This extension contributes the following settings:
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+* `my-self-affirmations.affirmations`: Overrides the default self affirmations. Expects a json array of strings.
+* `my-self-affirmations.timeInterval.unit`: Sets the time interval unit for displaying self affirmations. `s`, `m`, `h`, for seconds, minutes, and hours. Default is `m` 
+* `my-self-affirmations.timeInterval.value`: Sets the value of the time interval. Default is 30.
 
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Examle custom 2 hour interval:
+```
+"my-self-affirmations.timeInterval.unit": "h",
+"my-self-affirmations.timeInterval.value": 2
+```

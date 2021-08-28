@@ -1,10 +1,15 @@
 {
   "name": "my-self-affirmations",
-  "displayName": "my-self-affirmations",
-  "description": "",
+  "displayName": "My Self Affirmations",
+  "description": "My Self Affirmation is a vs code extension that displays a self affirmation from a configurable list of self affirmations on a set time interval",
+  "publisher": "ZaferSamirKhourdaji",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.59.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zkhourdaji/my-self-affirmations"
   },
   "categories": [
     "Other"
@@ -14,12 +19,6 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "my-self-affirmations.helloWorld",
-        "title": "Hello World"
-      }
-    ],
     "configuration": [
       {
         "title": "My Self Affirmations",
@@ -37,10 +36,10 @@
             ],
             "default": "m"
           },
-		  "my-self-affirmations.affirmations":{
-			  "type":"array",
-			  "default": null
-		  }
+          "my-self-affirmations.affirmations": {
+            "type": "array",
+            "default": null
+          }
         }
       }
     ]

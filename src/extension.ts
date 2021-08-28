@@ -1,7 +1,5 @@
-import { window, workspace, commands, ExtensionContext } from "vscode";
+import { window, workspace, ExtensionContext } from "vscode";
 import * as defaultAffirmations from "./affirmations.json";
-
-// const { window, workspace } = vscode;
 
 let intervalId: NodeJS.Timeout;
 
@@ -14,14 +12,11 @@ const startMySelfAffirmations = () => {
     config.get<number>("timeInterval.value")! *
     (unit === "s" ? 1000 : unit === "m" ? 60000 : unit === "h" ? 3600000 : 0);
   clearInterval(intervalId);
+  window.showInformationMessage(affirmations[Math.floor(Math.random() * affirmations.length)]);
   intervalId = setInterval(() => {
     window.showInformationMessage(affirmations[Math.floor(Math.random() * affirmations.length)]);
   }, milliseconds);
-
-  console.log(userSuppliedAffirmations || defaultAffirmations);
-  console.log('Congratulations, your extension "my-self-affirmations" is now active!');
 };
-
 
 export function activate(context: ExtensionContext) {
   const onChangeConfigurationDispoable = workspace.onDidChangeConfiguration((configurationChangeEvent) => {
